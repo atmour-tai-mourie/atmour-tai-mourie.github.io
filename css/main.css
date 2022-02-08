@@ -1,0 +1,36 @@
+body {
+  background-color: darkcyan;
+}
+
+nav {
+  background-color: darkcyan;
+}
+
+article {
+  background-color: rgb(2, 170, 170);
+}
+
+.nav-link {
+  color: rgb(0, 53, 53);
+}
+
+.article-link {
+  color: #000000;
+}
+
+.article-link:hover {
+  color: #000000;
+}
+
+.spacer-block {
+  height: 110px;
+}
+
+.logo {
+  height: 30px;
+  width: auto;
+}
+
+.article-pic:hover {
+  border: 1px solid darkcyan;
+}

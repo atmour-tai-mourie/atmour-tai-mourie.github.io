@@ -1,9 +1,59 @@
+<!DOCTYPE html>
 <html>
   <head>
-    <title>My blog</title>
+    <title>Blog</title>
+    <meta charset="UTF-8" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/main.css" rel="stylesheet" type="text/css" />
+  </head>
   <body>
-    <h1>Kia ora Taiao! (Hello World!)</h1> 
-    <p> This is the beginning of my website home page.</p>
-    <p> It will eventually contain a list of links to all my blogs. </p>
+    <header class="container-fluid">
+      <nav class="row pt-5 navbar fixed-top">
+        <h1 class="col-6 text-right navbar-text">tai mourie</h1>
+        <h3 class="col-6 align-items-end">
+          <a href="contact.html" class="nav-link navbar-text">about me</a>
+        </h3>
+      </nav>
+    </header>
+    <section class="container">
+      <div class="spacer-block col-8"></div>
+      <div class="row justify-content-center">
+        <div class="col-8 blog-column rounded-bottom">
+          <article class="mt-4 p-4 rounded">
+            <a href="blog/blog-article-1.html"
+              ><img
+                src="http://placekitten.com/800/300"
+                class="img-fluid mb-4 rounded article-pic"
+                alt="Responsive image"
+            /></a>
+            <a href="blog/blog-article-1.html" class="article-link"
+              ><h2 class="ml-4">This is my first article</h2></a
+            >
+            <p>
+              Lorem ipsum dolor sit amet et delectus accommodare his consul
+              copiosae legendos at vix ad putent delectus delicata usu. Vidit
+              dissentiet eos cu eum an brute copiosae hendrerit...
+            </p>
+          </article>
+          <article class="mt-4 p-4 rounded">
+            <a href="blog/blog-article-1.html"
+              ><img
+                src="http://placekitten.com/800/300"
+                class="img-fluid mb-4 rounded article-pic"
+                alt="Responsive image"
+            /></a>
+            <a href="blog/blog-article-1.html" class="article-link"
+              ><h2 class="ml-4">This is my second article</h2></a
+            >
+            <p>
+              Lorem ipsum dolor sit amet et delectus accommodare his consul
+              copiosae legendos at vix ad putent delectus delicata usu. Vidit
+              dissentiet eos cu eum an brute copiosae hendrerit...
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
   </body>
 </html>
