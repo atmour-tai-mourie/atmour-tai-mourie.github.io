@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>To id or not to ID</title>
+    <meta charset="UTF-8" />
+    <link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link
+      href="../css/bootstrap-theme.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link href="../css/main.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <header class="container-fluid">
+      <nav class="row pt-0 navbar fixed-top">
+        <h1 class="col-6 text-right navbar-text">tai mourie</h1>
+        <h3 class="col-6 align-items-end">
+          <a href="../index.html" class="nav-link navbar-text">back to blog</a>
+        </h3>
+      </nav>
+    </header>
+    <section class="container">
+      <div class="spacer-block-article col-8"></div>
+      <div class="row justify-content-center">
+        <div class="col-lg-8 blog-column rounded-bottom">
+          <article class="mt-4 p-4">
+            <img
+              src="../images/html.png"
+              class="img-fluid mb-4 rounded"
+              alt="Generic HTML image"
+            />
+            <h2 class="article-link my-4">To id or not to ID</h2>
+            <p>
+              What are the best practices associated with using classes vs. ids
+              as tags for HTML elements? Before researching the use of classes
+              and IDs, I didn’t see any reason for using IDs at all. You can
+              just use a class, right? To pull apart this question, I needed to
+              find out what makes IDs different from classes, what actually are
+              best practices, and how are the best practices justified.
+            </p>
+            <h5>A (not so) brief primer on HTML, elements and CSS.</h5>
+            <p>
+              HTML is a programming language used to build websites. It is the
+              core building tool, used to specify the content of the web page,
+              images and text and all that jazz. HTML also is used to build the
+              basic structure of the page, laying out where the text, content,
+              etc… is placed on the page and how combinations of text and images
+              are grouped together.
+            </p>
+            <p>
+              Elements are the building blocks of HTML, they are used to specify
+              what the content being added is.
+            </p>
+            <p>
+              For example, using the element <img /> specifies that the element
+              is an image,
+            </p>
+            <p>&lt;ol&gt; is an ordered list such as</p>
+            <ol>
+              <li>foo</li>
+              <li>bar</li>
+              <li>baz</li>
+            </ol>
+            <p>
+              Along with defining the content, elements are used when laying out
+              the structure of a webpage. Content such as images and text, can
+              be placed inside of another element such as a &lt;div&gt;, which
+              is like a box containing the content.
+            </p>
+            <p class="row align-items-center">
+              <code class="mr-5">
+                &lt;div&gt; <br />
+                &lt;img src="http://placekitten.com/100/100"&gt; <br />
+                &lt;p&gt;This is kitten&lt;/p&gt; <br />
+                &lt;/div&gt;
+              </code>
+              <img
+                src="../images/div-box-example.png"
+                alt="Example showing how a div can contain image and text elements"
+                class="ml-5 my-3"
+              />
+            </p>
+            <p>
+              The example above shows an image (&lt;img&gt;) and text
+              (&lt;p&gt;) wrapped in a div (&lt;div&gt;). In the output next to
+              it you can see that the image and text with a red outline are
+              inside of the div which has a black outline. That is the
+              fundamentals on how elements are used in HTML.
+            </p>
+            <p>
+              One final note about elements. In the example above you may notice
+              that the image (&lt;img&gt;) element has src=”http://place…”
+              inside of this. This is an attribute, more specifically the source
+              attribute for the image, telling the webpage where to find the
+              image it needs to use. There are other types of attributes for
+              elements as well, two of which are the focus of this post. They
+              are ID and the Class element, these will be explained shortly.
+            </p>
+            <p>
+              Now let’s talk about CSS. Before we can get into the IDs and
+              classes, we need to understand what CSS does. CSS gives a page
+              it’s visual pzazz, it’s funk, it is used to define what colours
+              are used, what size elements are, where they are on the page and
+              so much more. However, to give an element a colour or any other
+              styling with CSS, we need to specify which element we want to
+              apply our specific CSS code to. For example, to make my text in
+              the example above pink, I can write the following:
+            </p>
+            <p>
+              <code> #image-text { color: pink; } </code>
+            </p>
+            <p>
+              This will pick up the object (my text) with the ID = “image-text”,
+              and make it all pretty in pink.
+            </p>
+            <h5>IDs</h5>
+            <p>
+              IDs are an attribute we can assign to an element, that is a unique
+              identifier. Like your driver’s licence number or studylink client
+              ID, this should be unique to you or in this case the element. We
+              can assign an id by simply including id=”id-name” in an element,
+              e.g. &lt;id=”image-text”&gt;. Because the ID is unique, when using
+              the ID to select an element in CSS to style we can be sure that it
+              will only style the one element with that ID.
+            </p>
+            <p><code> #image-text { color: pink; } </code></p>
+            <p>
+              <q cite="http://cssdeck.com/blog/when-to-use-css-ids-and-classes"
+                >IDs are unique and beautiful snowflakes. Classes are not.</q
+              >
+              - Ray Enoch (cssdeck.com/blog/when-to-use-css-ids-and-classes)
+            </p>
+            <h5>Classes</h5>
+            <p>
+              Classes are an attribute that is used to define a group of
+              elements. Unlike IDs, we can put the same class on multiple
+              different elements. We in turn can make an element belong to
+              multiple classes. This allows us to set a rule in CSS, and apply
+              it to multiple elements.
+            </p>
+            <p>
+              If I had five different images, and I wanted to put a blue border
+              around each of them, I could give them all the same class. By
+              adding the attribute class=”image-border” to each image, we could
+              then specify the following in CSS
+            </p>
+            <p>
+              <code>
+                .image-border { <br />
+                border-style: solid; <br />
+                border-color: blue;<br />
+                }
+              </code>
+            </p>
+            <p>
+              Any element with the class=”image-border” would now have a blue
+              border, so I could add this class attribute to all of my images
+              that I want to have the border.
+            </p>
+            <h5>Best practice for using IDs and classes</h5>
+            <p>
+              The consensus from a variety of sources, is that it is best
+              practice to use IDs to apply css styling to elements that are
+              unique from all other elements. Such as if all you text on the
+              page is black but one text element needs to be blue. In that case
+              you would assign the blue text element an ID and use this in CSS
+              to apply the blue colour. Classes are to be used when the styling
+              is applied to more than one specific object or if the styling is
+              likely to be used again in the future.
+            </p>
+            <p>
+              That is as expected really, and although it is best practice I was
+              not convinced on why I have to use IDs. I have never found any
+              situation where I couldn’t just use a class even if it was a
+              unique element, and I have found that to look cleaner and made it
+              easier to review my code and make changes. In my research I found
+              many opinions along the same lines, why use IDs? Why? I almost
+              stopped there, unchanged in my opinion, unwilling to concede.
+            </p>
+            <p>
+              Unfortunately as per usual one person came in with a complex, yet
+              extremely well written and understandable explanation to give this
+              stubborn mule a shove in the right direction. I will attempt to
+              explain, while leaving the links below for you to read if you
+              leave this post without a clue about what I am trying to say.
+            </p>
+            <h5>Specificity</h5>
+            <p>
+              The answer to why we (possibly) need to use IDs alongside classes
+              is specificity. This essentially is how CSS determines how to
+              apply rules, specifically in the case when two conflicting styles
+              apply to the same element. Say I have a text element with
+              class=”text-primary”, and in my CSS code I have stated the
+              following:
+            </p>
+            <p>
+              <code>
+                .text-primary { <br />
+                color: red; <br />
+                }
+              </code>
+            </p>
+            <p>
+              <code>
+                .text-primary { <br />
+                color: blue; <br />
+                }
+              </code>
+            </p>
+            <p>
+              What colour would my text be? In this case it would be blue. The
+              basic rule of specificity is that if the selector (essentially
+              what is used to select the element i.e class, ID etc…) is the
+              same, then the latest rule (furthest down the page) is used. So in
+              this case the blue colour rule is after the red colour rule so the
+              colour of the text will be blue. Hopefully simple enough.
+            </p>
+            <p>
+              Now getting to IDs and classes, almost 100% of the time if an
+              element has both a class and an ID, and these are both used to
+              apply a style to elements in CSS, the style using the ID as the
+              selector will be used, regardless of order on the page. Take a
+              look at my previous example where the text element now has the
+              id=”image1-text”, alongside the class=”text-primary”.
+            </p>
+            <p>
+              <code>
+                #image1-text { <br />
+                color: red; <br />
+                }
+              </code>
+            </p>
+            <p>
+              <code>
+                .text-primary { <br />
+                color: blue; <br />
+                }
+              </code>
+            </p>
+            <p>
+              My text will now be red. As the ID selector “image1-text” is used
+              over the class selector.
+            </p>
+            <p>
+              What does this mean for how we use IDs and classes? By using an ID
+              for a unique element we can ensure that styling applied to this ID
+              will be used on this element. Since multiple classes can be
+              assigned to an element we can ensure that we will not have the
+              problem of a class giving the element one style, then overriding
+              our intended styling in another class CSS rule.
+            </p>
+            <p id="last-blog-paragraph">
+              That is the key reason that I could identify why, in theory we
+              should use IDs alongside classes. A developer could argue that
+              with tidy organised code, using just classes and avoiding
+              conflicting style declarations is just as easy and functional as
+              using IDs. Although that developer is inexperienced, should
+              probably just follow what is deemed to be best practice. I think I
+              will need to start using IDs, maybe.
+            </p>
+            <p>
+              <strong>Note:</strong> When using javascript and possibly other
+              tools, IDs can be important especially for selecting elements
+              using the getElementById() selector to use in your js script. The
+              above discussion simply refers to the use of IDs as a CSS
+              selector.
+            </p>
+            <p>
+              <strong>Specificity Links:</strong><br />
+              <a
+                href="https://www.codecademy.com/forum_questions/53ac57c3282ae3c0820004d5
+                "
+                >www.codecademy.com/forum_questions/53ac57c3282ae3c0820004d5
+              </a>
+              <br />
+              <a
+                href="https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity 
+
+              "
+                >developer.mozilla.org/en-US/docs/Web/CSS/Specificity
+              </a>
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

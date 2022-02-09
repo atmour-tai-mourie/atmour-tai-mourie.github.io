@@ -7,7 +7,11 @@ nav {
 }
 
 article {
-  background-color: rgb(2, 170, 170);
+  background-color: rgb(4, 196, 196);
+}
+
+code {
+  color: black;
 }
 
 .nav-link {
@@ -22,15 +26,40 @@ article {
   color: #000000;
 }
 
-.spacer-block {
+.spacer-block-index {
   height: 110px;
 }
 
-.logo {
+.spacer-block-article {
+  height: 50px;
+}
+
+.linkedin-logo {
   height: 30px;
   width: auto;
 }
 
 .article-pic:hover {
   border: 1px solid darkcyan;
+}
+
+.blog-column h5 {
+  margin-bottom: 4%;
+  margin-top: 8%;
+}
+
+.blog-column p {
+  margin-left: 5%;
+}
+
+.blog-column h1 {
+  margin-bottom: 5%;
+}
+
+.blog-column ol {
+  margin-left: 5%;
+}
+
+#last-blog-paragraph {
+  padding-bottom: 10%;
 }
