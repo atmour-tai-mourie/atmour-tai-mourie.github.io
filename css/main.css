@@ -1,37 +1,51 @@
+/* ELEMENT TAGS */
+
+/* Applying background colour for page */
 body {
   background-color: #bffff1;
 }
 
+/* Applying background colour for header/nav */
 nav {
   background-color: #bffff1;
 }
 
+/* Applying background colour for articles and blog column */
 article {
   background-color: #74f2ce;
 }
 
+/* changing colour for code sections to black */
 code {
   color: black;
 }
 
+/* CLASSES*/
+
+/*LINKS*/
+
+/* changing colour for links in nav to greyish colour */
 .nav-link {
   color: rgb(0, 53, 53);
 }
 
+/* changing colour for article titles/links to black */
 .article-link {
   color: #000000;
 }
 
+/* changing colour for article titles/links to black when hovered over
+  fixed blue underline when hovered over */
 .article-link:hover {
   color: #000000;
 }
 
 .spacer-block-index {
-  height: 110px;
+  height: 50px;
 }
 
 .spacer-block-article {
-  height: 50px;
+  height: 20px;
 }
 
 .linkedin-logo {
