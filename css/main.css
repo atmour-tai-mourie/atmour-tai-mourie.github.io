@@ -40,41 +40,62 @@ code {
   color: #000000;
 }
 
+/* OTHER */
+
+/* give divs size to space navbar down so that it looks right, and moves over spacer divs a nd collapses on scroll"*/
 .spacer-block-index {
   height: 50px;
 }
-
 .spacer-block-article {
   height: 20px;
 }
 
+/* makes linkedin logo smaller that it real size*/
 .linkedin-logo {
   height: 30px;
   width: auto;
 }
 
+/* gives articles on main page a border when hovered over to suggest they are clickable" */
+
 .article-pic:hover {
-  border: 1px solid darkcyan;
+  border: 1px solid #74f2ce;
 }
 
-.blog-column h5 {
-  margin-bottom: 4%;
-  margin-top: 8%;
-}
-
-.blog-column p {
-  margin-left: 5%;
-  margin-right: 5%;
-}
+/* add space between paragraphs and headings */
 
 .blog-column h1 {
   margin-bottom: 5%;
 }
-
+.blog-column h5 {
+  margin-bottom: 4%;
+  margin-top: 8%;
+}
+.blog-column p {
+  margin-left: 5%;
+  margin-right: 5%;
+}
 .blog-column ol {
   margin-left: 5%;
 }
 
+/* add space between last paragraph and notes/links section */
+
 #last-blog-paragraph {
   padding-bottom: 10%;
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    font-size: 1.5em;
+  }
+
+  h2 {
+    font-size: 1.5em;
+    margin-bottom: 5%;
+  }
+
+  h5 {
+    font-size: 1.15em;
+  }
 }
