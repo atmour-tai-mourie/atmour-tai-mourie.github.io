@@ -2,22 +2,26 @@
 
 /* Applying background colour for page */
 body {
-  background-color: #bffff1;
+	background-color: #bffff1;
 }
 
 /* Applying background colour for header/nav */
 nav {
-  background-color: #bffff1;
+	background-color: #bffff1;
 }
 
 /* Applying background colour for articles and blog column */
 article {
-  background-color: #74f2ce;
+	background-color: #74f2ce;
+}
+
+article img {
+	background-color: #ffffff;
 }
 
 /* changing colour for code sections to black */
 code {
-  color: black;
+	color: black;
 }
 
 /* CLASSES*/
@@ -26,77 +30,77 @@ code {
 
 /* changing colour for links in nav to greyish colour */
 .nav-link {
-  color: rgb(0, 53, 53);
+	color: rgb(0, 53, 53);
 }
 
 /* changing colour for article titles/links to black */
 .article-link {
-  color: #000000;
+	color: #000000;
 }
 
 /* changing colour for article titles/links to black when hovered over
   fixed blue underline when hovered over */
 .article-link:hover {
-  color: #000000;
+	color: #000000;
 }
 
 /* OTHER */
 
 /* give divs size to space navbar down so that it looks right, and moves over spacer divs a nd collapses on scroll"*/
 .spacer-block-index {
-  height: 50px;
+	height: 50px;
 }
 .spacer-block-article {
-  height: 20px;
+	height: 20px;
 }
 
 /* makes linkedin logo smaller that it real size*/
 .linkedin-logo {
-  height: 30px;
-  width: auto;
+	height: 30px;
+	width: auto;
 }
 
 /* gives articles on main page a border when hovered over to suggest they are clickable" */
 
 .article-pic:hover {
-  border: 1px solid #74f2ce;
+	border: 1px solid #74f2ce;
 }
 
 /* add space between paragraphs and headings */
 
 .blog-column h1 {
-  margin-bottom: 5%;
+	margin-bottom: 5%;
 }
 .blog-column h5 {
-  margin-bottom: 4%;
-  margin-top: 8%;
+	margin-bottom: 4%;
+	margin-top: 8%;
 }
 .blog-column p {
-  margin-left: 5%;
-  margin-right: 5%;
+	margin-left: 5%;
+	margin-right: 5%;
 }
 .blog-column ol {
-  margin-left: 5%;
+	margin-left: 5%;
 }
 
 /* add space between last paragraph and notes/links section */
 
 #last-blog-paragraph {
-  padding-bottom: 10%;
+	padding-bottom: 10%;
 }
 
 @media only screen and (max-width: 850px) {
-  /* For mobile phones */
-  body {
-    font-size: 1.5em;
-  }
+	/* For mobile phones */
+	body {
+		font-size: 1.5em;
+	}
 
-  h2 {
-    font-size: 1.5em;
-    margin-bottom: 5%;
-  }
+	h2 {
+		font-size: 1.5em;
+		margin-bottom: 5%;
+	}
 
-  h5 {
-    font-size: 1.15em;
-  }
+	h5 {
+		font-size: 1.15em;
+	}
 }
