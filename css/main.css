@@ -103,6 +103,10 @@ code {
 		font-size: 1.5em;
 	}
 
+	h1 {
+		font-size: 2em;
+	}
+
 	h2 {
 		font-size: 1.5em;
 		margin-bottom: 5%;
@@ -128,7 +132,7 @@ code {
 
 .index-main-container h1 {
 	color: #ffffff;
-	font-size: 7em;
+	font-size: 7rem;
 }
 
 .new {
@@ -154,4 +158,18 @@ code {
 
 .blog-link {
 	color: #000000;
+}
+
+.blog-link:hover {
+	color: #00000080;
+	text-decoration: none;
+}
+
+.contact-link {
+	color: #ffffff;
+}
+
+.contact-link:hover {
+	color: #ffffff80;
+	text-decoration: none;
 }
