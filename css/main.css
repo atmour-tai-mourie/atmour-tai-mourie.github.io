@@ -1,13 +1,21 @@
 /* ELEMENT TAGS */
 
-/* Applying background colour for page */
-body {
-	background-color: #bffff1;
+/* Applying background colour for page  
+*/
+
+@import url("https://fonts.googleapis.com/css?family=Grenze+Gotisch&display=swap");
+
+html {
+	height: 100%;
 }
 
-/* Applying background colour for header/nav */
+body {
+	height: 100%;
+}
+
+/* Applying background colour for header/nav  */
 nav {
-	background-color: #bffff1;
+	background-color: #ffffff00;
 }
 
 /* Applying background colour for articles and blog column */
@@ -103,4 +111,47 @@ code {
 	h5 {
 		font-size: 1.15em;
 	}
+}
+
+.index-main-container {
+	background: url(../images/background3.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	font-family: "Grenze Gotisch", "San Serif";
+}
+
+.index-main-container h1 {
+	color: #ffffff;
+	font-size: 7em;
+}
+
+.new {
+	opacity: 0;
+	position: absolute;
+	color: #ffffff;
+}
+
+.old {
+	transition: opacity 0.2s linear;
+}
+
+.new {
+	transition: opacity 0.7s linear;
+}
+
+.wrap:hover .old {
+	opacity: 0;
+}
+.wrap:hover .new {
+	opacity: 1;
+}
+
+.blog-link {
+	color: #000000;
 }
