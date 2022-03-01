@@ -10,88 +10,113 @@
 </head>
 
 <body>
-    <div class="spacer-block-article col-8"></div>
-    <header class="container-fluid sticky-top">
-        <nav class="row navbar py-0">
-            <h1 class="col-6 text-right navbar-text py-0">tai mourie</h1>
-            <h3 class="col-6 align-items-end py-0">
-                <a href="../index.html" class="nav-link navbar-text">back to blog</a>
-            </h3>
-        </nav>
-    </header>
-    <section class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-8 blog-column rounded-bottom">
-                <article class="mt-4 p-4">
-                    <img src="../images/astroman.jpg" class="img-fluid mb-4 rounded"
-                        alt="cartoon astronaut hanging from a crescent moon" />
-                    <h2 class="article-link my-4">Problem Solving</h2>
-                    <h5>The problem that blocked me</h5>
-                    <p>
-                        I encountered a problem and got stuck on the capitalise function of the built-in methods kata.
-                        Completing this kata required creating a function that capitalises the first letter of each word
-                        in a sentence. My solution was to create an array with an item for each world, then loop through
-                        the array capitalising the first letter of each word, finally putting the words back together as
-                        a sentence (string).
-                    </p>
-                    <p>
-                        The problem I encountered was that my initial approach involved taking the first letter of each
-                        word using the index of the word then index of the first letter ( wordArray[i][0]). The
-                        wordArray[i] part returns the word, then the final [0] returns the first letter of the word. I
-                        tried to capitalise this letter and set the first letter to it using <code>wordArray[i][0] =
+    <div class="index-main-container">
+        <div class="spacer-block-article col-8"></div>
+        <header class="container-fluid sticky-top">
+            <nav class="row navbar py-0">
+                <h1 class="col-6 text-right navbar-text py-0 article-name-title">tai mourie</h1>
+                <h3 class="col-6 align-items-end py-0">
+                    <a href="../blog-page.html" class="go-back-link blog-link navbar-text">back to blog</a>
+                </h3>
+            </nav>
+        </header>
+        <section class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 blog-column rounded-bottom">
+                    <article class="mt-4 p-4">
+                        <img src="../images/astroman.jpg" class="img-fluid mb-4 rounded"
+                            alt="cartoon astronaut hanging from a crescent moon" />
+                        <h2 class="article-link my-4">Problem Solving</h2>
+                        <h5>The problem that blocked me</h5>
+                        <p>
+                            I encountered a problem and got stuck on the capitalise function of the built-in methods
+                            kata.
+                            Completing this kata required creating a function that capitalises the first letter of each
+                            word
+                            in a sentence. My solution was to create an array with an item for each world, then loop
+                            through
+                            the array capitalising the first letter of each word, finally putting the words back
+                            together as
+                            a sentence (string).
+                        </p>
+                        <p>
+                            The problem I encountered was that my initial approach involved taking the first letter of
+                            each
+                            word using the index of the word then index of the first letter ( wordArray[i][0]). The
+                            wordArray[i] part returns the word, then the final [0] returns the first letter of the word.
+                            I
+                            tried to capitalise this letter and set the first letter to it using <code>wordArray[i][0] =
                         wordArray[i][0].toUpperCase</code>. However my result was not passing the tests.
-                    </p>
-                    <p>
-                        I used console.log to see what I was returning from the function, and I could see that I was
-                        returning the sentence without any capitalisations. I then logged each word in the array as I
-                        looped through them, after I had made my changes. No capitalization, so I could assume that my
-                        code to capitalise the first letter of the word was not working. I was frustrated not
-                        understanding why my logic was not capitalising the first letter. I ended up googling how to
-                        capitalise each word in an array, and was given stackoverflow question that showed the following
-                        answer:
-                    </p>
-                    <p>
-                        <code> for (i = 0; i < wordArray.length; i++) { <br>
+                        </p>
+                        <p>
+                            I used console.log to see what I was returning from the function, and I could see that I was
+                            returning the sentence without any capitalisations. I then logged each word in the array as
+                            I
+                            looped through them, after I had made my changes. No capitalization, so I could assume that
+                            my
+                            code to capitalise the first letter of the word was not working. I was frustrated not
+                            understanding why my logic was not capitalising the first letter. I ended up googling how to
+                            capitalise each word in an array, and was given stackoverflow question that showed the
+                            following
+                            answer:
+                        </p>
+                        <p>
+                            <code> for (i = 0; i < wordArray.length; i++) { <br>
                             wordArray[i] = wordArray[i].charAt(0).toUpperCase() + wordArray[i].slice(1)<br>
                           }
                         </code>
-                    </p>
-                    <p>
-                        This worked! Now I had to figure out why this worked and my solution did not. The first thing I
-                        checked was using the .charAt(0) method, trying to reassign the first letter of the word to a
-                        capital version of itself. No luck. I had also noticed that the item itself was being
-                        reassigned, rather than just the first letter. After some more googling in a moment of triumph I
-                        learnt that array items are immutable. This means that they are not able to be altered, only
-                        reassigned. Originally I was trying to tell JavaScript to change the first letter of the word to
-                        uppercase, but JS was unable to change the word. So that was why the final solution got the
-                        first letter, capitalised it and combined it back with the rest of the word, before then
-                        reassigning the index of the original word to the capitalised version. Essentially replacing the
-                        whole item rather than trying to change it.
-                    </p>
-                    <h5>My happy solution</h5>
-                    <p>
-                        I was very satisfied with how I solved the super fizzbuzz kata. The super fizzbuzz kata involved
-                        replacing numbers in an array with fizz, buzz or fizzbuzz, if they were a multiple of 3, 5 or a
-                        multiple of both 3 and 5 respectively. I originally thought I might be able to use a switch
-                        method, but a quick google revealed the switch statement couldn’t take different conditions such
-                        as identifying multiples of three, then 5 which I needed to do. So used a nested ternary
-                        operator, which acted like if statements but looked much simpler and readable. To test if the
-                        number was a multiple of 3, 5 or both, I used the remainder (%) operator, and checked for a
-                        remainder when dividing for each number, if 0 was returned then it was a multiple. To simplify
-                        this further I created a utility to return the remainder. If a number was a multiple fizz, buzz
-                        or fizzbuzz was returned, if not then the number was returned. This solution looked very simple,
-                        tidy and readable and I was very satisfied.
-                    </p>
+                        </p>
+                        <p>
+                            This worked! Now I had to figure out why this worked and my solution did not. The first
+                            thing I
+                            checked was using the .charAt(0) method, trying to reassign the first letter of the word to
+                            a
+                            capital version of itself. No luck. I had also noticed that the item itself was being
+                            reassigned, rather than just the first letter. After some more googling in a moment of
+                            triumph I
+                            learnt that array items are immutable. This means that they are not able to be altered, only
+                            reassigned. Originally I was trying to tell JavaScript to change the first letter of the
+                            word to
+                            uppercase, but JS was unable to change the word. So that was why the final solution got the
+                            first letter, capitalised it and combined it back with the rest of the word, before then
+                            reassigning the index of the original word to the capitalised version. Essentially replacing
+                            the
+                            whole item rather than trying to change it.
+                        </p>
+                        <h5>My happy solution</h5>
+                        <p>
+                            I was very satisfied with how I solved the super fizzbuzz kata. The super fizzbuzz kata
+                            involved
+                            replacing numbers in an array with fizz, buzz or fizzbuzz, if they were a multiple of 3, 5
+                            or a
+                            multiple of both 3 and 5 respectively. I originally thought I might be able to use a switch
+                            method, but a quick google revealed the switch statement couldn’t take different conditions
+                            such
+                            as identifying multiples of three, then 5 which I needed to do. So used a nested ternary
+                            operator, which acted like if statements but looked much simpler and readable. To test if
+                            the
+                            number was a multiple of 3, 5 or both, I used the remainder (%) operator, and checked for a
+                            remainder when dividing for each number, if 0 was returned then it was a multiple. To
+                            simplify
+                            this further I created a utility to return the remainder. If a number was a multiple fizz,
+                            buzz
+                            or fizzbuzz was returned, if not then the number was returned. This solution looked very
+                            simple,
+                            tidy and readable and I was very satisfied.
+                        </p>
 
-                    <p>
-                        Finally to do this across the whole array, I simply created an empty new array, looped through
-                        the array I was given, ran the fizzbuzz function over each value and pushed them into the new
-                        array. Straightforward, easy and simple. Beautiful.
-                    </p>
-                </article>
+                        <p>
+                            Finally to do this across the whole array, I simply created an empty new array, looped
+                            through
+                            the array I was given, ran the fizzbuzz function over each value and pushed them into the
+                            new
+                            array. Straightforward, easy and simple. Beautiful.
+                        </p>
+                    </article>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </div>
 </body>
 
 </html>

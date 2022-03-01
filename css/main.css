@@ -1,22 +1,31 @@
 /* ELEMENT TAGS */
 
-/* Applying background colour for page */
-body {
-	background-color: #bffff1;
+/* Applying background colour for page  
+*/
+
+@import url("https://fonts.googleapis.com/css?family=Grenze+Gotisch&display=swap");
+
+html {
+	height: 100%;
 }
 
-/* Applying background colour for header/nav */
+body {
+	height: 100%;
+	width: 100%;
+}
+
+/* Applying background colour for header/nav  */
 nav {
-	background-color: #bffff1;
+	background-color: #ffffff00;
 }
 
 /* Applying background colour for articles and blog column */
 article {
-	background-color: #74f2ce;
+	background-color: #ffffff80;
 }
 
 article img {
-	background-color: #ffffff;
+	background-color: #ffffff00;
 }
 
 /* changing colour for code sections to black */
@@ -55,10 +64,6 @@ code {
 }
 
 /* makes linkedin logo smaller that it real size*/
-.linkedin-logo {
-	height: 30px;
-	width: auto;
-}
 
 /* gives articles on main page a border when hovered over to suggest they are clickable" */
 
@@ -89,18 +94,176 @@ code {
 	padding-bottom: 10%;
 }
 
-@media only screen and (max-width: 850px) {
-	/* For mobile phones */
-	body {
-		font-size: 1.5em;
+.index-main-container {
+	background: url(../images/background3-mobile.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: fixed;
+	background-color: rgb(200, 65, 45);
+	width: 100%;
+	min-height: 100%;
+	height: auto;
+	font-family: "Grenze Gotisch", "San Serif";
+}
+
+.index-name {
+	color: #ffffff;
+	font-size: 80px;
+}
+
+.new {
+	color: #ffffff;
+}
+
+.old {
+	transition: opacity 0.2s linear;
+}
+
+.blog-link {
+	color: #000000;
+}
+
+.blog-link:hover {
+	color: #00000080;
+	text-decoration: none;
+}
+
+.contact-link {
+	color: #ffffff;
+}
+
+.contact-link:hover {
+	color: #ffffff80;
+	text-decoration: none;
+}
+
+#title-container {
+	padding-top: 40%;
+	padding-left: 5%;
+	padding-right: 5%;
+}
+
+article p {
+	font-size: 3em;
+	font-family: "Lucida-sans";
+	padding-bottom: 5%;
+}
+
+article h5 {
+	font-size: 3em;
+	font-weight: bolder;
+	font-family: "Lucida-sans";
+}
+
+article h2 {
+	font-size: 4em;
+	font-weight: bolder;
+	font-family: "Lucida-sans";
+	padding-bottom: 5%;
+}
+
+#profileImg {
+	width: 70%;
+	height: auto;
+	padding-bottom: 5%;
+}
+
+.linkedin-logo {
+	height: 50px;
+	width: auto;
+}
+
+.page-title {
+	color: #ffffff;
+	font-size: 7em;
+}
+
+.go-back-link {
+	font-size: 2.5em;
+}
+
+.go-back-link-contact {
+	font-size: 2.5em;
+}
+
+.article-name-title {
+	color: #ffffff;
+	font-size: 7em;
+}
+
+@media (min-width: 1100px) {
+	.index-main-container {
+		background: url(../images/background3.jpg);
+		background-size: cover;
+		background-attachment: fixed;
 	}
 
-	h2 {
-		font-size: 1.5em;
-		margin-bottom: 5%;
+	.index-name {
+		font-size: 120px;
 	}
 
-	h5 {
-		font-size: 1.15em;
+	#title-container {
+		padding-top: 15%;
+		padding-left: 5%;
+		padding-right: 5%;
+		height: 100%;
+	}
+	.new {
+		opacity: 0;
+		position: absolute;
+		transition: opacity 0.7s linear;
+	}
+
+	.wrap:hover .old {
+		opacity: 0;
+	}
+	.wrap:hover .new {
+		opacity: 1;
+	}
+
+	.linkedin-logo {
+		height: 30px;
+		width: auto;
+	}
+
+	article p {
+		font-size: 1em;
+		font-family: "Lucida-sans";
+		padding: 0%;
+	}
+
+	article h2 {
+		font-size: 2em;
+		font-family: "Lucida-sans";
+		padding: 0%;
+	}
+
+	#profileImg {
+		width: 200px;
+		height: auto;
+		padding-bottom: 0%;
+	}
+
+	.go-back-link {
+		font-size: 1.25em;
+	}
+
+	.page-title {
+		color: #ffffff;
+		font-size: 5em;
+	}
+	.go-back-link-contact {
+		font-size: 1.25em;
+	}
+
+	.article-name-title {
+		color: #ffffff;
+		font-size: 5em;
+	}
+
+	article h5 {
+		font-size: 1.25em;
+		font-weight: bolder;
+		font-family: "Lucida-sans";
 	}
 }
