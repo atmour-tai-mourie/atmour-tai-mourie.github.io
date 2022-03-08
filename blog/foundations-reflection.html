@@ -27,91 +27,82 @@
                         <img src="../images/astroman.jpg" class="img-fluid mb-4 rounded"
                             alt="cartoon astronaut hanging from a crescent moon" />
                         <h2 class="article-link my-4">Problem Solving</h2>
-                        <h5>The problem that blocked me</h5>
+                        <h5>What are three new things you have learnt about yourself and your ego as a result of the
+                            core learning?</h5>
                         <p>
-                            I encountered a problem and got stuck on the capitalise function of the built-in methods
-                            kata.
-                            Completing this kata required creating a function that capitalises the first letter of each
-                            word
-                            in a sentence. My solution was to create an array with an item for each world, then loop
-                            through
-                            the array capitalising the first letter of each word, finally putting the words back
-                            together as
-                            a sentence (string).
+                            I have learned that I have a strongly ingrained fixed mindset, especially the mindset of
+                            only being able to develop existing strengths, and not being able to be successful in areas
+                            outside of these strengths. I also learnt that vulnerability can be extremely powerful, and
+                            that I have a tendency to avoid vulnerability, hiding it not only from others but myself.
+                            Finally I learnt about how easy it is for me to start doing something, but applying new
+                            learnings and practices consistently is something I struggle with. This was evident in my
+                            time planning and reflection, where I managed to keep it up well for a couple of weeks, but
+                            then it all became more sporadic and unorganised.
                         </p>
+                        <h5>What are the role of values, empathy, and self awareness in learning and programming?
+                        </h5>
                         <p>
-                            The problem I encountered was that my initial approach involved taking the first letter of
-                            each
-                            word using the index of the word then index of the first letter ( wordArray[i][0]). The
-                            wordArray[i] part returns the word, then the final [0] returns the first letter of the word.
-                            I
-                            tried to capitalise this letter and set the first letter to it using <code>wordArray[i][0] =
-                        wordArray[i][0].toUpperCase</code>. However my result was not passing the tests.
+                            Values, empathy and self awareness not only in learning and programming, but in everything
+                            you do can be a powerful tool for direction and guidance. They can allow you to identify
+                            what really matters, and can act as a solid point to steer towards. Empathy while working
+                            for others creates much more rewarding experience, allowing for connections to flourish, and
+                            awesome ideas to come to fruition. Empathy towards yourself and self awareness can help you
+                            to blossom as an individual, self kindness can make an awful day into a positive learning
+                            experience.
                         </p>
+                        <h5>What has surprised you the most about the core learning?
+                        </h5>
                         <p>
-                            I used console.log to see what I was returning from the function, and I could see that I was
-                            returning the sentence without any capitalisations. I then logged each word in the array as
-                            I
-                            looped through them, after I had made my changes. No capitalization, so I could assume that
-                            my
-                            code to capitalise the first letter of the word was not working. I was frustrated not
-                            understanding why my logic was not capitalising the first letter. I ended up googling how to
-                            capitalise each word in an array, and was given stackoverflow question that showed the
-                            following
-                            answer:
+                            Without a doubt I have been surprised the most by the impact of practising meditation. As my
+                            meditation sessions progress I can feel my instinctive responses and emotions towards the
+                            world around me slip away as I am engulfed in clarity. In these moments I can feel what
+                            truly matters to me, I can easily direct my mind and soul to focus on what is important.
+                            This helps me to live up to my morals and values, as the noise of my mind and body can
+                            distort how I act, and pull me away from these. When I am finished, the calm relaxed state I
+                            am in helps me to get everything I need to get done, done.
                         </p>
+                        <h5>What were the most challenging aspects of the core learning?
+                        </h5>
                         <p>
-                            <code> for (i = 0; i < wordArray.length; i++) { <br>
-                            wordArray[i] = wordArray[i].charAt(0).toUpperCase() + wordArray[i].slice(1)<br>
-                          }
-                        </code>
+                            The most challenging aspect of the core learning is trying to apply it all at once, for me
+                            each area requires persistence and consistency. Even though I can be very persistent for a
+                            while or even a couple of weeks, I have not been persistent over long periods in the past,
+                            and consistency has historically not been a word in my vocabulary. My time spent
+                            consistently meditating and running in the past few months has shown me the value that can
+                            be gained from applying yourself consistently at the same skill. So now the goal for me is
+                            to figure out what other practices are important or easy for me to apply, and make sure I do
+                            them.
                         </p>
+                        <h5>Why do you think that we, a programming school, are spending so much time focusing on core
+                            learning in a web development bootcamp course?
+                        </h5>
                         <p>
-                            This worked! Now I had to figure out why this worked and my solution did not. The first
-                            thing I
-                            checked was using the .charAt(0) method, trying to reassign the first letter of the word to
-                            a
-                            capital version of itself. No luck. I had also noticed that the item itself was being
-                            reassigned, rather than just the first letter. After some more googling in a moment of
-                            triumph I
-                            learnt that array items are immutable. This means that they are not able to be altered, only
-                            reassigned. Originally I was trying to tell JavaScript to change the first letter of the
-                            word to
-                            uppercase, but JS was unable to change the word. So that was why the final solution got the
-                            first letter, capitalised it and combined it back with the rest of the word, before then
-                            reassigning the index of the original word to the capitalised version. Essentially replacing
-                            the
-                            whole item rather than trying to change it.
+                            The reason is in the name, Core, this learning helps to build the foundation for us as
+                            learners to become successful developers. The core learning content is like an amplifier to
+                            maximise the value of time spent learning code and coding concepts. The core content also
+                            amplifies our abilities once we are in the workforce, helping us to be proficient,
+                            continuously learn and keep ourselves and peers sane while we learn and work. It also helps
+                            to reinforce that knowing how to write code and build things isn't the sole measure for
+                            success, wellbeing, ability to learn, ability to collaborate, self value etc… are all
+                            crucial to becoming a great coder, colleague, friend.
                         </p>
-                        <h5>My happy solution</h5>
+                        <h5>
+                            Does the time you spent studying core learning here feel like a waste of time? Should you
+                            have just used that time to practise programming instead? Justify your answer.
+
+                        </h5>
                         <p>
-                            I was very satisfied with how I solved the super fizzbuzz kata. The super fizzbuzz kata
-                            involved
-                            replacing numbers in an array with fizz, buzz or fizzbuzz, if they were a multiple of 3, 5
-                            or a
-                            multiple of both 3 and 5 respectively. I originally thought I might be able to use a switch
-                            method, but a quick google revealed the switch statement couldn’t take different conditions
-                            such
-                            as identifying multiples of three, then 5 which I needed to do. So used a nested ternary
-                            operator, which acted like if statements but looked much simpler and readable. To test if
-                            the
-                            number was a multiple of 3, 5 or both, I used the remainder (%) operator, and checked for a
-                            remainder when dividing for each number, if 0 was returned then it was a multiple. To
-                            simplify
-                            this further I created a utility to return the remainder. If a number was a multiple fizz,
-                            buzz
-                            or fizzbuzz was returned, if not then the number was returned. This solution looked very
-                            simple,
-                            tidy and readable and I was very satisfied.
+                            As is emphasised in my answers above the core content is just as valuable as the programming
+                            content. In my opinion both the tech and core content are complimentary. There is great
+                            value in the direction and guidance from learning to program from experts. There is just as
+                            much value, maybe more in learning the core skills from educators with experience and
+                            expertise in the field. To be told “hey this works for us, you should try this” is a lot
+                            easier than scouring the internet through self help articles. Then to pair both the core
+                            content with the tech content, maximises the value that we gain from the tech component. I
+                            don’t really see them as separate, they are just each half of the larger puzzle we are
+                            trying to solve.
                         </p>
 
-                        <p>
-                            Finally to do this across the whole array, I simply created an empty new array, looped
-                            through
-                            the array I was given, ran the fizzbuzz function over each value and pushed them into the
-                            new
-                            array. Straightforward, easy and simple. Beautiful.
-                        </p>
                     </article>
                 </div>
             </div>
